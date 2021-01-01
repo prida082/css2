@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Document</title>
     <style>
@@ -23,7 +22,7 @@
         }
 
         body {
-            background-color: rgba(247, 187, 138, 0.993);
+            background-color: rgba(44, 121, 108, 0.993);
             line-height: 40px;
         }
 
@@ -42,7 +41,7 @@
         }
 
         button {
-            background-color: #f4511e;
+            background-color: #1ef45e;
             border: none;
             color: white;
             padding: 2px 16px;
@@ -75,63 +74,587 @@
 <body>
     <div class="container">
         <div class="row">
+            <div class="col-sm">
+                <form action="">
 
-            <form action="">
+                    <center>
+                        <img src="https://www.matichon.co.th/wp-content/uploads/2018/03/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B9%82%E0%B8%88%E0%B9%89_edit.png"
+                            width="25%">
+                    </center>
+                    <h2 align="center">คําร้องขอลาพักการศึกษา(มจท.10)</h2>
+                    <h4 align="center">(สําหรับนักศึกษาที่ได้ศึกษามาแล้ว ไม่น้อยกว่าหนึ่งภาคการศึกษา)</h4>
 
-                <center>
-                    <img src="https://www.matichon.co.th/wp-content/uploads/2018/03/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B9%82%E0%B8%88%E0%B9%89_edit.png"
-                        width="25%">
-                </center>
-                <h2 align="center">คําร้องขอลาพักการศึกษา(มจท.10)</h2>
-                <h4 align="center">(สําหรับนักศึกษาที่ได้ศึกษามาแล้ว ไม่น้อยกว่าหนึ่งภาคการศึกษา)</h4>
+                    <div class="custom-control-inline">
+                        <h5 for="start">วันที่&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input id="today" type="date" class="form-control">
+                            </div>
+                        </div>
+                    </div> <br>
 
-                <div class="custom-control-inline">
-                    <h5 for="start">วันที่&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input id="today" type="date" class="form-control">
+
+                    <div class="custom-control-inline">
+                        <h5>เรื่อง ขอลาพักการศึกษา ในภาคเรียนที่&ensp;</h5>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">
+                                <h5>1</h5>
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">
+                                <h5>2</h5>
+                            </label>
+                        </div>
+                    </div><br>
+
+                    <div class="custom-control-inline">
+                        <h5>ปีการศึกษา&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="ํพ.ศ." min="2530" max="2564">
+                            </div>
                         </div>
                     </div>
-                </div> <br>
+                    <br>
+
+                    <div class="custom-control-inline">
+                        <h5>เรียน คณบดีคณะ&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder=" " maxlength="35"
+                                    pattern="[A-Za-z]{1,10}" required>
+                            </div>
+                        </div>
+                    </div>&ensp;
+
+                    <div class="custom-control-inline">
+
+                        <div class="form-row align-items-center">
+                            <h5>ข้าพเจ้า&ensp;</h5>
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>คำนำหน้า</option>
+                                    <option value="1">นาย</option>
+                                    <option value="2">นาง</option>
+                                    <option value="3">นางสาว</option>
+                                </select>
+                            </div>
 
 
-                <div class="custom-control-inline">
-                    <h5>เรื่อง ขอลาพักการศึกษา ในภาคเรียนที่&ensp;</h5>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio1">
-                            <h5>1</h5>
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio2">
-                            <h5>2</h5>
-                        </label>
-                    </div>
-                </div><br>
+                            <h5>ชื่อ-สกุล&ensp;</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder=" " maxlength="35"
+                                        pattern="[A-Za-z]{1,10}" required>
+                                </div>
+                            </div>&ensp;
 
-                <div class="custom-control-inline">
-                    <h5>ปีการศึกษา&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="number" class="form-control" placeholder="ํพ.ศ." min="2530" max="2564">
+                            <h5>รหัสนักศึกษา&ensp;</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder=" " maxlength="10"
+                                        pattern="{1,10}" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+
+                    <div class="custom-control-inline">
+                        <h5>โทรศัพท์มือถือ (10หลัก) &ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="โปรดระบุ" maxlength="10"
+                                    pattern="[0-9]{10}" required>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br>
 
-                <div class="custom-control-inline">
-                    <h5>เรียน คณบดีคณะ&ensp;</h5>
+                    <div class="custom-control-inline">
+                        <div class="form-row align-items-center">
+                            <h5>หลักสูตร ปริญญาตรี&ensp;</h5>
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>โปรดระบุ</option>
+                                    <option value="1">4–5ปี</option>
+                                    <option value="2">4 ปีเทียบเข้าเรียน(2ปี)</option>
+                                    <option value="3">ภาคปกติ</option>
+                                    <option value="3">ภาคสมทบ</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-control-inline">
+                        <h5>สาขาวิชา&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder=" " maxlength="20"
+                                    pattern="[A-Za-z]{1,10}" required>
+                            </div>
+                        </div>&ensp;
+                        <h5>คณะ&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder=" " maxlength="20"
+                                    pattern="[A-Za-z]{1,10}" required>
+                            </div>
+                        </div>
+                    </div>&ensp;
+
+                    <div class="form-group">
+                        <h5 for="exampleFormControlTextarea1">มีความประสงค2จะขอลาพักการศึกษา เนื่องจาก</h5>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <h6>พร้อมนี้ได้แนบใบยินยอมขอลาพักการศึกษาจากผู้ปกครอง/ใบรับรองแพทย์/เอกสารอื่นๆ</h6>
+                    </div>
+
+                    <center>
+                        <h5> จึงเรียนมาเพื่อโปรดพิจารณา ขอแสดงความนับถือ</h5>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="validatedCustomFile1" required>
+                            <label class="custom-file-label" for="validatedCustomFile1">โปรดแนบลายเซนต์...</label>
+                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                            <h6>นักศึกษา</h6>
+                            </div1>
+
+
+                            <div class="col-auto my-1">
+                                <button type="submit" class="botton">ยืนยันข้อมูล</button>
+                            </div><br>
+                    </center>
+
+                    <div class="custom-control-inline">
+
+                        <div class="col-auto my-1">
+                            <h4>ความเห็นหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ</h4>
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1">
+                                <h5> ทราบ นักศึกษาดังกล่าวสามารถลาพักการศึกษาได้</h5>
+                            </label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2">
+                                <h5>ภาคเรียนที่ 1</h5>
+                            </label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3">
+                                <h5>ภาคเรียนที่ 2</h5>
+                            </label><br>
+
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile2" required>
+                                <label type=label0 class="custom-file-label"
+                                    for="validatedCustomFile2">โปรดแนบลายเซนต์...</label>
+                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                <h6>หัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ </h6>
+
+
+                                <div class="custom-control-inline">
+                                    <h7 for="start">วันที่บันทึก&ensp;</h7>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input id="today" type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+
+
+                        <div class="col-auto my-1">
+                            <h4>ความเห็นผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</h4>
+                            <input type="checkbox" id="vehicle4" name="vehicle4" value="Bike">
+                            <label for="vehicle1">
+                                <h5> ทราบ </h5>
+                            </label><br>
+
+
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile3" required>
+                                <label type=label0 class="custom-file-label"
+                                    for="validatedCustomFile3">โปรดแนบลายเซนต์...</label>
+                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                <h6>ผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</h6>
+                                </div1>
+
+                                <div class="custom-control-inline">
+                                    <h7 for="start">วันที่บันทึก&ensp;</h7>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input id="today" type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><br><br>
+
+                    <div class="custom-control-inline">
+
+                        <div class="col-auto my-1">
+                            <h4>ความเห็นอาจารย์ที่ปรึกษา</h4>
+                            <input type="checkbox" id="vehicle5" name="vehicle5" value="Bike">
+                            <label for="vehicle1">
+                                <h5> ทราบ </h5>
+                            </label><br>
+
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile4" required>
+                                <label type=label0 class="custom-file-label"
+                                    for="validatedCustomFile4">โปรดแนบลายเซนต์...</label>
+                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                <h6></h6>
+
+                                <div class="custom-control-inline">
+                                    <h7 for="start">วันที่บันทึก&ensp;</h7>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input id="today" type="date" class="form-control">
+                                        </div>
+                                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+
+
+                        <div class="col-auto my-1">
+                            <h4>ความเห็นประธานคณะกรรมการประจําหลักสูตร</h4>
+                            <input type="checkbox" id="vehicle4" name="vehicle4" value="Bike">
+                            <label for="vehicle1">
+                                <h5> ทราบ </h5>
+                            </label><br>
+
+
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile4" required>
+                                <label type=label0 class="custom-file-label"
+                                    for="validatedCustomFile4">โปรดแนบลายเซนต์...</label>
+                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+
+
+
+                                <div class="custom-control-inline">
+                                    <h7 for="start">วันที่บันทึก&ensp;</h7>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input id="today" type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br><br>
+
+                    <div class="custom-control-inline">
+
+                        <div class="col-auto my-1">
+                            <h4>ความเห็นคณบดี&ensp;</h4>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">
+                                    <h5>อนุมัติ</h5>
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio4">
+                                    <h5>ไม่อนุมัติ</h5>
+                                </label>
+                            </div>
+
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile6" required>
+                                <label type=label0 type=label0 class="custom-file-label"
+                                    for="validatedCustomFile6">โปรดแนบลายเซนต์...</label>
+                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                <h6></h6>
+
+                                <div class="custom-control-inline">
+                                    <h7 for="start">วันที่บันทึก&ensp;</h7>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input id="today" type="date" class="form-control">
+                                        </div>&ensp;&ensp;&ensp;&ensp;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-auto">
+                            <h4>งานเงินรายได้ กองคลัง ชั้น 2 อาคารอิงคศรีกสิการ<br>
+                                ได้รับชําระเงินจํานวน</h4>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio5">
+                                    <h5> ภาคเรียนที่1 1,200 บาท</h5>
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio6">
+                                    <h5>ภาคเรียนที่2 1,000 บาท</h5>
+                                </label>
+                            </div>
+
+
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile7" required>
+                                <label type=label0 class="custom-file-label"
+                                    for="validatedCustomFile7">โปรดแนบลายเซนต์...</label>
+                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                <h6>ผู้รับเงิน</h6>
+                                </div1>
+
+                                <div class="custom-control-inline">
+                                    <h7 for="start">วันที่บันทึก&ensp;</h7>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input id="today" type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><br><br>
+
+                    <div class="custom-control-inline">
+
+                        <div class="col-auto my-1">
+                            <h4>ส่งเอกสารคําร้องขอลาพักการศึกษาตัวจริง</h4>
+                            <h6>ให้กลุ่มภารกิจทะเบียนฯ ชั้น 2 อาคารอํานวย ยศสุข เพื่อบันทึก<br>
+                                คําร้องขอลาพักการศึกษา และให้นักศึกษาเก็บหลักฐานใบเสร็จ<br>
+                                ที่ชําระเงินไว้เพื่อตรวจสอบการบันทึกการลาพักการศึกษา<br>
+                            </h6>
+
+
+                        </div>
+
+
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        <div class="col-auto my-1">
+                            <h4>สําหรับเจ้าหน้าที่บันทึกลงฐานข้อมูล <br>ได้บันทึกการข้อมูล
+                                ดังกล่าว</h4>
+                            <div class="custom-control-inline">
+                                <h7 for="start">ในวันที่&ensp;</h7>
+                                <div class="row">
+                                    <div class="col">
+                                        <input id="today" type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile8" required>
+                                <label type=label0 class="custom-file-label"
+                                    for="validatedCustomFile8">โปรดแนบลายเซนต์...</label>
+                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+
+
+                                <div class="custom-control-inline">
+                                    <h7 for="start">วันที่บันทึก&ensp;</h7>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input id="today" type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><br><br>
+
+
+                    <h2 align="center">คํารับรองของผู้ปกครอง</h2>
+
+
+                    <h5>เขียนที่&ensp;</h5>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder=" " maxlength="35"
+                            <input type="text2" class="form-control"
+                                placeholder="บ้านเลขที่ หมู่ที่ ตําบล อําเภอ จังหวัด" maxlength="50"
                                 pattern="[A-Za-z]{1,10}" required>
                         </div>
-                    </div>
-                </div>&ensp;
+                    </div>&ensp;
 
-                <div class="custom-control-inline">
+                    <div class="custom-control-inline">
+
+                        <h5>รหัสไปรษณีย์&ensp;</h5>
+                        <div class="row">
+                            <div class="col-auto">
+                                <input type="text2" class="form-control" placeholder=" " maxlength="5"
+                                    pattern="[A-Za-z]{1,10}" required>
+                            </div>
+                        </div>&ensp;
+
+                        <h5>เบอร์โทรศัพท์&ensp;</h5>
+                        <div class="row">
+                            <div class="col-auto">
+                                <input type="text2" class="form-control" placeholder=" " maxlength="5"
+                                    pattern="[A-Za-z]{1,10}" required>
+                            </div>
+                        </div>&ensp;
+
+                        <div class="custom-control-inline">
+                            <h5 for="start">วันที่&ensp;</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <input id="today" type="date" class="form-control">
+                                </div>
+                            </div>
+                        </div> <br>
+
+                    </div>
+
+                    <div class="custom-control-inline">
+                        <h5>เรื่อง ยินยอมให้นักศึกษาลาพักการศึกษา ในภาคเรียนที&ensp;</h5>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadio8" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio8">
+                                <h5>1</h5>
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadio9" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio9">
+                                <h5>2</h5>
+                            </label>
+                        </div>
+                    </div><br>
+
+                    <div class="custom-control-inline">
+                        <h5>ปีการศึกษา&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="ํพ.ศ." min="2530" max="2564">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="custom-control-inline">
+                        <h5>เรียน คณบดีคณะ&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder=" " maxlength="35"
+                                    pattern="[A-Za-z]{1,10}" required>
+                            </div>
+                        </div>
+                    </div>&ensp;
+
+                    <div class="custom-control-inline">
+
+                        <div class="form-row align-items-center">
+                            <h5>ตามที่&ensp;</h5>
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>คำนำหน้า</option>
+                                    <option value="1">นาย</option>
+                                    <option value="2">นาง</option>
+                                    <option value="3">นางสาว</option>
+                                </select>
+                            </div>
+
+
+                            <h5>ชื่อ-สกุล&ensp;</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder=" " maxlength="35"
+                                        pattern="[A-Za-z]{1,10}" required>
+                                </div>
+                            </div>&ensp;
+
+                            <h5>รหัสนักศึกษา&ensp;</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder=" " maxlength="10"
+                                        pattern="{1,10}" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+
+                    <div class="custom-control-inline">
+                        <h5>โทรศัพท์มือถือ (10หลัก) &ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="โปรดระบุ" maxlength="10"
+                                    pattern="[0-9]{10}" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-control-inline">
+                        <div class="form-row align-items-center">
+                            <h5>หลักสูตร ปริญญาตรี&ensp;</h5>
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>โปรดระบุ</option>
+                                    <option value="1">4–5ปี</option>
+                                    <option value="2">4 ปีเทียบเข้าเรียน(2ปี)</option>
+                                    <option value="3">ภาคปกติ</option>
+                                    <option value="3">ภาคสมทบ</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-control-inline">
+                        <h5>สาขาวิชา&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder=" " maxlength="20"
+                                    pattern="[A-Za-z]{1,10}" required>
+                            </div>
+                        </div>&ensp;
+                        <h5>คณะ&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder=" " maxlength="20"
+                                    pattern="[A-Za-z]{1,10}" required>
+                            </div>
+                        </div>
+                    </div>&ensp;
+
+                    <div class="custom-control-inline">
+                        <h5>ซึ่งเป็นนักศึกษาในความปกครองของข้าพเจ้ามีความประสงค์จะขอลาพักการศึกษา ในภาคเรียนที่&ensp;
+                        </h5>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadio10" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio10">
+                                <h5>1</h5>
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadio11" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio11">
+                                <h5>2</h5>
+                            </label>
+                        </div>
+                    </div><br>
+
+                    <div class="custom-control-inline">
+                        <h5>ปีการศึกษา&ensp;</h5>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="ํพ.ศ." min="2530" max="2564">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <h5 for="exampleFormControlTextarea1">เนื่องจาก</h5>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
 
                     <div class="form-row align-items-center">
                         <h5>ข้าพเจ้า&ensp;</h5>
@@ -153,529 +676,7 @@
                                     pattern="[A-Za-z]{1,10}" required>
                             </div>
                         </div>&ensp;
-
-                        <h5>รหัสนักศึกษา&ensp;</h5>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder=" " maxlength="10" pattern="{1,10}"
-                                    required>
-                            </div>
-                        </div>
                     </div>
-                </div><br>
-
-                <div class="custom-control-inline">
-                    <h5>โทรศัพท์มือถือ (10หลัก) &ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="โปรดระบุ" maxlength="10"
-                                pattern="[0-9]{10}" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="custom-control-inline">
-                    <div class="form-row align-items-center">
-                        <h5>หลักสูตร ปริญญาตรี&ensp;</h5>
-                        <div class="col-auto my-1">
-                            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>โปรดระบุ</option>
-                                <option value="1">4–5ปี</option>
-                                <option value="2">4 ปีเทียบเข้าเรียน(2ปี)</option>
-                                <option value="3">ภาคปกติ</option>
-                                <option value="3">ภาคสมทบ</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="custom-control-inline">
-                    <h5>สาขาวิชา&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder=" " maxlength="20"
-                                pattern="[A-Za-z]{1,10}" required>
-                        </div>
-                    </div>&ensp;
-                    <h5>คณะ&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder=" " maxlength="20"
-                                pattern="[A-Za-z]{1,10}" required>
-                        </div>
-                    </div>
-                </div>&ensp;
-
-                <div class="form-group">
-                    <h5 for="exampleFormControlTextarea1">มีความประสงค2จะขอลาพักการศึกษา เนื่องจาก</h5>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    <h6>พร้อมนี้ได้แนบใบยินยอมขอลาพักการศึกษาจากผู้ปกครอง/ใบรับรองแพทย์/เอกสารอื่นๆ</h6>
-                </div>
-
-                <center>
-                    <h5> จึงเรียนมาเพื่อโปรดพิจารณา ขอแสดงความนับถือ</h5>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="validatedCustomFile1" required>
-                        <label class="custom-file-label" for="validatedCustomFile1">โปรดแนบลายเซนต์...</label>
-                        <div class="invalid-feedback">Example invalid custom file feedback</div>
-                        <h6>นักศึกษา</h6>
-                        </div1>
-
-
-                        <div class="col-auto my-1">
-                            <button type="submit" class="botton">บันทึกข้อมูล</button>
-                        </div><br>
-                </center>
-
-                <div class="custom-control-inline">
-
-                    <div class="col-auto my-1">
-                        <h4>ความเห็นหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ</h4>
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                        <label for="vehicle1">
-                            <h5> ทราบ นักศึกษาดังกล่าวสามารถลาพักการศึกษาได้</h5>
-                        </label><br>
-                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                        <label for="vehicle2">
-                            <h5>ภาคเรียนที่ 1</h5>
-                        </label><br>
-                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                        <label for="vehicle3">
-                            <h5>ภาคเรียนที่ 2</h5>
-                        </label><br>
-
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile2" required>
-                            <label type=label0 class="custom-file-label"
-                                for="validatedCustomFile2">โปรดแนบลายเซนต์...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
-                            <h6>หัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ </h6>
-
-
-                            <div class="custom-control-inline">
-                                <h7 for="start">วันที่บันทึก&ensp;</h7>
-                                <div class="row">
-                                    <div class="col">
-                                        <input id="today" type="date" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><br>
-
-
-                    <div class="col-auto my-1">
-                        <h4>ความเห็นผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</h4>
-                        <input type="checkbox" id="vehicle4" name="vehicle4" value="Bike">
-                        <label for="vehicle1">
-                            <h5> ทราบ </h5>
-                        </label><br>
-
-
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile3" required>
-                            <label type=label0 class="custom-file-label"
-                                for="validatedCustomFile3">โปรดแนบลายเซนต์...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
-                            <h6>ผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</h6>
-                            </div1>
-
-                            <div class="custom-control-inline">
-                                <h7 for="start">วันที่บันทึก&ensp;</h7>
-                                <div class="row">
-                                    <div class="col">
-                                        <input id="today" type="date" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><br><br>
-
-                <div class="custom-control-inline">
-
-                    <div class="col-auto my-1">
-                        <h4>ความเห็นอาจารย์ที่ปรึกษา</h4>
-                        <input type="checkbox" id="vehicle5" name="vehicle5" value="Bike">
-                        <label for="vehicle1">
-                            <h5> ทราบ </h5>
-                        </label><br>
-
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile4" required>
-                            <label type=label0 class="custom-file-label"
-                                for="validatedCustomFile4">โปรดแนบลายเซนต์...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
-                            <h6></h6>
-
-                            <div class="custom-control-inline">
-                                <h7 for="start">วันที่บันทึก&ensp;</h7>
-                                <div class="row">
-                                    <div class="col">
-                                        <input id="today" type="date" class="form-control">
-                                    </div>
-                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-                                </div>
-                            </div>
-                        </div>
-                    </div><br>
-
-
-                    <div class="col-auto my-1">
-                        <h4>ความเห็นประธานคณะกรรมการประจําหลักสูตร</h4>
-                        <input type="checkbox" id="vehicle4" name="vehicle4" value="Bike">
-                        <label for="vehicle1">
-                            <h5> ทราบ </h5>
-                        </label><br>
-
-
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile4" required>
-                            <label type=label0 class="custom-file-label"
-                                for="validatedCustomFile4">โปรดแนบลายเซนต์...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
-
-
-
-                            <div class="custom-control-inline">
-                                <h7 for="start">วันที่บันทึก&ensp;</h7>
-                                <div class="row">
-                                    <div class="col">
-                                        <input id="today" type="date" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><br><br>
-
-                <div class="custom-control-inline">
-
-                    <div class="col-auto my-1">
-                        <h4>ความเห็นคณบดี&ensp;</h4>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio3">
-                                <h5>อนุมัติ</h5>
-                            </label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio4">
-                                <h5>ไม่อนุมัติ</h5>
-                            </label>
-                        </div>
-
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile6" required>
-                            <label type=label0 type=label0 class="custom-file-label"
-                                for="validatedCustomFile6">โปรดแนบลายเซนต์...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
-                            <h6></h6>
-
-                            <div class="custom-control-inline">
-                                <h7 for="start">วันที่บันทึก&ensp;</h7>
-                                <div class="row">
-                                    <div class="col">
-                                        <input id="today" type="date" class="form-control">
-                                    </div>&ensp;&ensp;&ensp;&ensp;
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-auto">
-                        <h4>งานเงินรายได้ กองคลัง ชั้น 2 อาคารอิงคศรีกสิการ<br>
-                            ได้รับชําระเงินจํานวน</h4>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio5">
-                                <h5> ภาคเรียนที่1 1,200 บาท</h5>
-                            </label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio6">
-                                <h5>ภาคเรียนที่2 1,000 บาท</h5>
-                            </label>
-                        </div>
-
-
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile7" required>
-                            <label type=label0 class="custom-file-label"
-                                for="validatedCustomFile7">โปรดแนบลายเซนต์...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
-                            <h6>ผู้รับเงิน</h6>
-                            </div1>
-
-                            <div class="custom-control-inline">
-                                <h7 for="start">วันที่บันทึก&ensp;</h7>
-                                <div class="row">
-                                    <div class="col">
-                                        <input id="today" type="date" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><br><br>
-
-                <div class="custom-control-inline">
-
-                    <div class="col-auto my-1">
-                        <h4>ส่งเอกสารคําร้องขอลาพักการศึกษาตัวจริง</h4>
-                        <h6>ให้กลุ่มภารกิจทะเบียนฯ ชั้น 2 อาคารอํานวย ยศสุข เพื่อบันทึก<br>
-                            คําร้องขอลาพักการศึกษา และให้นักศึกษาเก็บหลักฐานใบเสร็จ<br>
-                            ที่ชําระเงินไว้เพื่อตรวจสอบการบันทึกการลาพักการศึกษา<br>
-                        </h6>
-
-
-                    </div>
-
-
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                    <div class="col-auto my-1">
-                        <h4>สําหรับเจ้าหน้าที่บันทึกลงฐานข้อมูล <br>ได้บันทึกการข้อมูล
-                            ดังกล่าว</h4>
-                        <div class="custom-control-inline">
-                            <h7 for="start">ในวันที่&ensp;</h7>
-                            <div class="row">
-                                <div class="col">
-                                    <input id="today" type="date" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile8" required>
-                            <label type=label0 class="custom-file-label"
-                                for="validatedCustomFile8">โปรดแนบลายเซนต์...</label>
-                            <div class="invalid-feedback">Example invalid custom file feedback</div>
-
-
-                            <div class="custom-control-inline">
-                                <h7 for="start">วันที่บันทึก&ensp;</h7>
-                                <div class="row">
-                                    <div class="col">
-                                        <input id="today" type="date" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><br><br>
-
-
-                <h2 align="center">คํารับรองของผู้ปกครอง</h2>
-
-
-                <h5>เขียนที่&ensp;</h5>
-                <div class="row">
-                    <div class="col">
-                        <input type="text2" class="form-control" placeholder="บ้านเลขที่ หมู่ที่ ตําบล อําเภอ จังหวัด"
-                            maxlength="50" pattern="[A-Za-z]{1,10}" required>
-                    </div>
-                </div>&ensp;
-
-                <div class="custom-control-inline">
-
-                    <h5>รหัสไปรษณีย์&ensp;</h5>
-                    <div class="row">
-                        <div class="col-auto">
-                            <input type="text2" class="form-control" placeholder=" " maxlength="5"
-                                pattern="[A-Za-z]{1,10}" required>
-                        </div>
-                    </div>&ensp;
-
-                    <h5>เบอร์โทรศัพท์&ensp;</h5>
-                    <div class="row">
-                        <div class="col-auto">
-                            <input type="text2" class="form-control" placeholder=" " maxlength="5"
-                                pattern="[A-Za-z]{1,10}" required>
-                        </div>
-                    </div>&ensp;
-
-                    <div class="custom-control-inline">
-                        <h5 for="start">วันที่&ensp;</h5>
-                        <div class="row">
-                            <div class="col">
-                                <input id="today" type="date" class="form-control">
-                            </div>
-                        </div>
-                    </div> <br>
-
-                </div>
-
-                <div class="custom-control-inline">
-                    <h5>เรื่อง ยินยอมให้นักศึกษาลาพักการศึกษา ในภาคเรียนที&ensp;</h5>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadio8" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio8">
-                            <h5>1</h5>
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadio9" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio9">
-                            <h5>2</h5>
-                        </label>
-                    </div>
-                </div><br>
-
-                <div class="custom-control-inline">
-                    <h5>ปีการศึกษา&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="number" class="form-control" placeholder="ํพ.ศ." min="2530" max="2564">
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="custom-control-inline">
-                    <h5>เรียน คณบดีคณะ&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder=" " maxlength="35"
-                                pattern="[A-Za-z]{1,10}" required>
-                        </div>
-                    </div>
-                </div>&ensp;
-
-                <div class="custom-control-inline">
-
-                    <div class="form-row align-items-center">
-                        <h5>ตามที่&ensp;</h5>
-                        <div class="col-auto my-1">
-                            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>คำนำหน้า</option>
-                                <option value="1">นาย</option>
-                                <option value="2">นาง</option>
-                                <option value="3">นางสาว</option>
-                            </select>
-                        </div>
-
-
-                        <h5>ชื่อ-สกุล&ensp;</h5>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder=" " maxlength="35"
-                                    pattern="[A-Za-z]{1,10}" required>
-                            </div>
-                        </div>&ensp;
-
-                        <h5>รหัสนักศึกษา&ensp;</h5>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder=" " maxlength="10" pattern="{1,10}"
-                                    required>
-                            </div>
-                        </div>
-                    </div>
-                </div><br>
-
-                <div class="custom-control-inline">
-                    <h5>โทรศัพท์มือถือ (10หลัก) &ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="โปรดระบุ" maxlength="10"
-                                pattern="[0-9]{10}" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="custom-control-inline">
-                    <div class="form-row align-items-center">
-                        <h5>หลักสูตร ปริญญาตรี&ensp;</h5>
-                        <div class="col-auto my-1">
-                            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>โปรดระบุ</option>
-                                <option value="1">4–5ปี</option>
-                                <option value="2">4 ปีเทียบเข้าเรียน(2ปี)</option>
-                                <option value="3">ภาคปกติ</option>
-                                <option value="3">ภาคสมทบ</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="custom-control-inline">
-                    <h5>สาขาวิชา&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder=" " maxlength="20"
-                                pattern="[A-Za-z]{1,10}" required>
-                        </div>
-                    </div>&ensp;
-                    <h5>คณะ&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder=" " maxlength="20"
-                                pattern="[A-Za-z]{1,10}" required>
-                        </div>
-                    </div>
-                </div>&ensp;
-
-                <div class="custom-control-inline">
-                    <h5>ซึ่งเป็นนักศึกษาในความปกครองของข้าพเจ้ามีความประสงค์จะขอลาพักการศึกษา ในภาคเรียนที่&ensp;</h5>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadio10" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio10">
-                            <h5>1</h5>
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadio11" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio11">
-                            <h5>2</h5>
-                        </label>
-                    </div>
-                </div><br>
-
-                <div class="custom-control-inline">
-                    <h5>ปีการศึกษา&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="number" class="form-control" placeholder="ํพ.ศ." min="2530" max="2564">
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group">
-                    <h5 for="exampleFormControlTextarea1">เนื่องจาก</h5>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-
-                <div class="form-row align-items-center">
-                    <h5>ข้าพเจ้า&ensp;</h5>
-                    <div class="col-auto my-1">
-                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                            <option selected>คำนำหน้า</option>
-                            <option value="1">นาย</option>
-                            <option value="2">นาง</option>
-                            <option value="3">นางสาว</option>
-                        </select>
-                    </div>
-
-
-                    <h5>ชื่อ-สกุล&ensp;</h5>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder=" " maxlength="35"
-                                pattern="[A-Za-z]{1,10}" required>
-                        </div>
-                    </div>&ensp;
-                </div>
 
                     <h5>ผู้ปกครองของนักศึกษาดังกล่าวข้างต้น ได้รับทราบการขอลาพักการศึกษาแล้ว
                         และยินดีให้ปฏิบัติตามความประสงค์ของนักศึกษา<br>
@@ -692,7 +693,7 @@
 
 
                             <div class="col-auto my-1">
-                                <button type="submit" class="botton">บันทึกข้อมูล</button>
+                                <button type="submit" class="botton">ยืนยันข้อมูล</button>
                             </div><br>
                     </center>
 
@@ -736,14 +737,13 @@
 
 
 
-            </form>
+                </form>
 
-
+            </div>
 
         </div>
     </div>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
